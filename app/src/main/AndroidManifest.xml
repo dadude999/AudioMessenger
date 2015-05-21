@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.audiomessenger" >
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- NOTE: label element is meaningless, see the label of MainActivity for the one actually used on the Home Screen -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+
+        android:theme="@style/AppTheme" >
+        <!-- label here is used ONLY for launcher icon -->
+        <!-- TODO - differentiate between main activity label and home screen app label -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecordingsListActivity"
+            android:label="@string/title_activity_recordings_list"
+            android:parentActivityName=".MainActivity" >
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/FileProviderAuthority"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,4 @@
+<paths>
+    <!-- TODO - this should carry reference to @string/RecordingsDirName, which it must match EXACTLY! -->
+    <files-path path="Recordings" name="recordingsPath" />
+</paths>

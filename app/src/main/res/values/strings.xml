@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AudioMessenger</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_recordings_list">RecordingsListActivity</string>
+    <string name="ABMainActivityTitle">Record</string>
+    <string name="ABRecordingsActivityTitle">Messages</string>
+    <string name="StopStr">STOP</string>
+    <string name="FileProviderAuthority">com.example.audiomessenger.fileprovider</string>
+    <!-- IMPORTANT! RecordingsDirName MUST match the files-path path from filepaths.xml!! -->
+    <string name="RecordingsDirName">Recordings</string>
+    <string name="MainActivityName">MainActivity</string>
+</resources>
