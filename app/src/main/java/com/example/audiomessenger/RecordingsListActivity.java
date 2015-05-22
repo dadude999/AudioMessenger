@@ -42,9 +42,7 @@ public class RecordingsListActivity extends ListActivity implements AdapterView.
     private final String ALERT_BUTTON_SAVE = "Save";
     private final String ALERT_BUTTON_DELETE = "Delete";
     private final String ALERT_MESSAGE_LONGCLICK = "Enter file name...";
-
-    private final String MIME_TYPE_MP4 = "audio/mp4";
-
+    
     private ArrayAdapter<String> m_Adapter;
     private MediaPlayer m_Player;
     private int m_SelectedItemIndex;
@@ -289,7 +287,6 @@ public class RecordingsListActivity extends ListActivity implements AdapterView.
                 Intent sharingIntent = new Intent();
                 sharingIntent.setAction(Intent.ACTION_SEND);
 
-                sharingIntent.setType(MIME_TYPE_MP4);
                 final String fileName = (String) list.getAdapter().getItem(position);
                 final File fileObj = new File(RECORDINGS_DIR, fileName);
                 Uri fileUri = FileProvider.getUriForFile(RecordingsListActivity.this, getString(R.string.FileProviderAuthority), fileObj);
